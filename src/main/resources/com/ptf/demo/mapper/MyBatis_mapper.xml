@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--次に作成するMapperInterfaceをFQCNで指定-->
+<mapper namespace="com.ptf.demo.mapper.UserMapper">
+<!--EntityクラスのプロパティとDBのデータをマップする、対応するEntityクラスは、FQCNで指定-->
+  <resultMap id="BaseResultMap" type="com.ptf.demo.domain.User" />
+
+<!--今回利用するステートメントの定義
+  <select id="findByLoginId" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id,login_id,password from user where login_id = #{loginId,jdbcType=VARCHAR}
+  </select>
+ </mapper>
+ -->
+ 
+  <!--今回利用するステートメントの定義-->
+  <select id="findByUsername" parameterType="java.lang.String" resultType="com.ptf.demo.entity.account">
+    select username,password　from account where password = #{password,jdbcType=VARCHAR}
+  </select>
+ </mapper>
+  
+  

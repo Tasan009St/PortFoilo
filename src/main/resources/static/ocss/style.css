@@ -1,0 +1,12 @@
+.jumbotron {
+  background-image: url("/picture/top0.jpg");
+  background-size: cover;
+  background-position: center 40%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.row-50>div{
+    padding-top:25px;
+    padding-bottom:25px;
+}

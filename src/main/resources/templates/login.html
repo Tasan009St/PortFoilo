@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Login page</title>
+<link href = "/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.alert-danger{color:red;}
+</style>
+</head>
+<body class="text-center">
+<h2>ログイン画面</h2>
+
+	<form th:action="@{/login}" method="post">
+	    <div th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null"
+	            class="alert-danger">
+	        <span th:text="ユーザ名またはパスワードに誤りがあります"></span>
+	    </div>
+	    	<label class ="col-sm3">ユーザ名：</label>
+		    <div class ="col-sm9">
+		    <input type="text" name="username" autofocus="autofocus" />
+		    </div>
+		    <label class ="col-sm3">パスワード：</label>
+		    <div class ="col-sm9">
+		    <input type="password" name="password" />
+		    </div>
+	    <p><input type="submit" value="ログイン" /></p>
+	</form>
+</body>
+</html>
